@@ -2,7 +2,7 @@
 # 1. Container configuration.
 
 name: 'drupal'
-type: 'php:8.0'
+type: 'php:8.1'
 
 ################################################
 # 2. Builds, enabled extensions, and deploys.
@@ -27,7 +27,7 @@ hooks:
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
         echo "Build complete."
 
-        
+
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
