@@ -26,6 +26,8 @@ hooks:
         set -e
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
         echo "Build complete."
+
+        
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php

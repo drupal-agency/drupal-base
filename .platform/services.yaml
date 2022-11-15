@@ -9,3 +9,4 @@ db:
 
 cache:
     type: redis:6.0
+
