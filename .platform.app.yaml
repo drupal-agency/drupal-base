@@ -124,3 +124,10 @@ source:
                     git add composer.lock
                     git commit --allow-empty -m "Dependency updates."
                 fi
+        upstream-update:
+            command: |
+                if [ “$PLATFORM_ENVIRONMENT_TYPE” != production ]; then
+                    git remote add upstream $UPSTREAM_REPO
+                    git fetch --all
+                    git merge upstream/$UPSTREAM_BRANCH
+                fi
